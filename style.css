@@ -1,0 +1,226 @@
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-050: hsl(330, 100%, 98%);
+    --gray-050: hsl(0, 0%, 88%);
+}
+
+.attribution { 
+    text-align: center; 
+    font-size: .75rem;
+    display: grid;
+    gap: .375rem;
+    margin-block-start: auto;
+    margin-block-end: 1.5rem;
+}
+
+.attribution a { 
+    color: var(--brown-800); 
+}
+
+.attribution p { 
+    font-weight: 300;
+    font-size: .875rem;
+}
+
+body {
+    margin: 0;
+    display: grid;
+}
+
+main {
+    padding-block-end: 2.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: grid;
+    gap: 2.25rem
+}
+
+h1 {
+    font-family: Young Serif;
+    margin: 0;
+    line-height: 100%;
+    font-weight: normal;
+    font-size: clamp(2.25rem, 9.6vw, 2.5rem);
+    color: var(--stone-900);
+}
+
+h2 {
+    font-family: Young Serif;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.75rem;
+    color: var(--brown-800);
+    line-height: 100%;
+}
+
+h3 {
+    font-family: Outfit;
+    line-height: 100%;
+    font-weight: 600;
+    color: var(--rose-800);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+p {
+    font-family: Outfit;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--stone-600);
+    font-size: 1rem;
+    margin: 0;
+}
+
+li{
+    font-family: Outfit;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--stone-600);
+    font-size: 1rem;
+    position: relative;
+    padding-inline-start: .375rem;
+}
+
+ul {
+    margin: 0;
+    padding-inline-start: 1.25rem;
+    display: grid;
+    gap: .5rem;
+
+}
+
+ol {
+    margin: 0;
+    padding-inline-start: 1.25rem;
+    display: grid;
+    gap: .5rem;
+}
+
+.heavy {
+    font-weight: 700;
+}
+
+.headboy {
+    display: grid;
+    gap: 1rem;
+}
+
+.prep-time {
+    background-color: var(--rose-050);
+    padding: clamp(1.5rem, 6.4vw, 1.75rem);
+    display: grid;
+    gap: 1rem;
+    border-radius: clamp(.75rem, 3.2vw, 1rem);
+}
+
+li::marker {
+    font-size: medium;
+    font-weight: 700;
+}
+
+.prep-time li::marker {
+    color: var(--rose-800);
+}
+
+.ingredients, .instructions {
+    display: grid;
+    gap: 1.5rem;
+    padding-block-end: 2rem;
+    border-block-end: .0625rem solid var(--gray-050);
+}
+
+.ingredients li::marker, .instructions li::marker {
+    color: var(--brown-800);
+}
+
+.nutrition {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nutrition-child {
+    display: grid;
+    gap: .75rem;
+}
+
+.nutrition-values p {
+    width: clamp(7.2188rem, 30.8vw, 18rem);
+    flex: 1;
+}
+
+.nutrition-values div {
+    display: flex;
+    padding: .75rem 1rem .75rem 1rem;
+    gap: 1rem;
+    border-block-end: .0625rem solid var(--gray-050);
+    
+}
+
+.nutrition-values div:last-of-type {
+    border-block-end: 0;
+}
+
+.nutrition-values {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+
+.nutrition .heavy {
+    color: var(--brown-800);
+}
+
+
+@media (min-width: 48rem) {
+    body {
+        background-color: var(--stone-100);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    article {
+        padding: 0;
+    }
+
+    main {
+        background-color: var(--white);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        display: grid;
+        gap: 2.5rem;
+        width: 46rem;
+        margin-block-start: 6rem;
+        margin-block-end: 6rem;
+    }
+
+    img {
+        border-radius: .75rem;
+    }
+
+    .attribution {
+        display: flex;
+        justify-content: center;
+        gap: 1.4rem;
+        margin-block-end: 2rem;
+    }
+
+    .nutrition-values div {
+        padding: .75rem 2rem .75rem 2rem;
+    }
+}
